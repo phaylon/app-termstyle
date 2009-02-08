@@ -1,0 +1,6 @@
+#!/usr/bin/env perl
+use strict;
+use ex::lib '../lib';
+use App::TermStyle::Script -run;
+#use aliased 'App::TermStyle::Script';
+#Script->new_with_options->run;
