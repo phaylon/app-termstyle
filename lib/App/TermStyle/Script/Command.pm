@@ -87,6 +87,7 @@ has _profiles => (
 has force => (
     is              => 'ro',
     isa             => Bool,
+    documentation   => 'enforce operation (e.g. override)',
 );
 
 method flush_config {
