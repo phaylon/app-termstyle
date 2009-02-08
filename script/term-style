@@ -2,5 +2,82 @@
 use strict;
 use ex::lib '../lib';
 use App::TermStyle::Script -run;
-#use aliased 'App::TermStyle::Script';
-#Script->new_with_options->run;
+__END__
+
+=head1 NAME
+
+term-style - Store, manage and load terminal size/position profiles
+
+=head1 USAGE
+
+  term-style [<options>] <command> [<argument> ...]
+
+=head1 OPTIONS
+
+=head2 --force
+
+Apply force to e.g. override an existing profile via C<store> or C<rename>.
+
+=head2 --config_path <path-to-cfg-file>
+
+Uses C<E<lt>path-to-cfg-fileE<lt>> as path to the file where the configuration
+and profiles should be stored. Defaults to C<~/.app-termstyle-rc>.
+
+=head1 COMMANDS
+
+=head2 list
+
+Shows a list of stored profiles.
+
+=head2 store <name>
+
+Stores the current window properties in a profile named C<E<lt>nameE<gt>>. 
+This will abort when a profile with that name already exists. If you want
+to override the existing profile, use the C<--force> option.
+
+=head2 rename <oldname> <newname>
+
+Renames the profile C<E<lt>oldnameE<gt>> to C<E<lt>newnameE<gt>>. This
+will abort if a profile named C<E<lt>newnameE<gt>> already exists. If you
+want to override the existing profile, use the C<--force> option.
+
+=head2 delete <name>
+
+Removes the profile C<E<lt>nameE<gt>> from storage.
+
+=head2 load <name>
+
+This will load the profile named C<E<lt>nameE<gt>> as the current terminal
+style profile. This will resize and reposition the current active terminal.
+
+=head1 EXAMPLES
+
+  $ term-style store foo
+  profile 'foo' created from window '~/Projects/App-TermStyle'
+     position x: 2
+     position y: 50
+          width: 938
+         height: 734
+  
+  $ term-style list
+  profile 'foo'
+     position x: 2
+     position y: 50
+          width: 938
+         height: 734
+  
+  $ term-style rename foo bar
+  renamed profile 'foo' to 'bar'
+  
+  $ term-style load bar
+  loaded profile 'bar'
+  
+  $ term-style load LAST
+  loaded profile 'LAST'
+  
+  $ term-style delete bar
+  deleted stored profile 'bar'
+
+=cut
+
+

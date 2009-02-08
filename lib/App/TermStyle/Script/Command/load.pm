@@ -1,4 +1,5 @@
 package App::TermStyle::Script::Command::load;
+use 5.010;
 use Moose;
 use MooseX::Method::Signatures;
 
@@ -26,6 +27,8 @@ method run (HashRef $options, ArrayRef $args) {
     $self->window->load_profile($profile);
 
     $self->flush_config;
+
+    say "loaded profile '$name'";
 }
 
 1;

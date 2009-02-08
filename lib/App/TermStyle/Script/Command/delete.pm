@@ -23,7 +23,7 @@ method run (HashRef $options, ArrayRef $args) {
     $self->remove_profile($name);
     $self->flush_config;
 
-    say "Deleted stored profile '$name'";
+    say "deleted stored profile '$name'";
 }
 
 1;

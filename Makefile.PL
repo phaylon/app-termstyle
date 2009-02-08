@@ -24,6 +24,10 @@ requires        'namespace::clean',             '0.09';
 requires        'ex::lib',                      '0.04';
 requires        'CLASS',                        '1.00';
 
+requires_external_bin 'xprop';
+requires_external_bin 'wmctrl';
+requires_external_bin 'xwininfo';
+
 install_script  'script/term-style';
 
 WriteAll;
