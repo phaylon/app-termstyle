@@ -20,7 +20,7 @@ Apply force to e.g. override an existing profile via C<store> or C<rename>.
 
 =head2 --config_path <path-to-cfg-file>
 
-Uses C<E<lt>path-to-cfg-fileE<lt>> as path to the file where the configuration
+Uses C<E<lt>path-to-cfg-fileE<gt>> as path to the file where the configuration
 and profiles should be stored. Defaults to C<~/.app-termstyle-rc>.
 
 =head1 COMMANDS

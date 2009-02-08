@@ -108,6 +108,7 @@ method flush_config {
 method add_profile (Object $profile) {
 
     my $name = $profile->name;
+
     die "There is already a profile named '$name'; Use --force to override.\n"
         if $self->has_profile($name) and not $self->force;
 

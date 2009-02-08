@@ -10,7 +10,7 @@ OPTIONS
     "rename".
 
   --config_path <path-to-cfg-file>
-    Uses "<path-to-cfg-file<" as path to the file where the configuration
+    Uses "<path-to-cfg-file>" as path to the file where the configuration
     and profiles should be stored. Defaults to "~/.app-termstyle-rc".
 
 COMMANDS
