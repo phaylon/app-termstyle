@@ -11,7 +11,7 @@ use aliased 'App::TermStyle::Window::Profile';
 
 use JSON::Any;
 use Carp                qw( croak );
-use Data::Dump          qw( pp );
+#use Data::Dump          qw( pp );
 use List::Util          qw( max );
 use Path::Class::File;
 use File::HomeDir;
